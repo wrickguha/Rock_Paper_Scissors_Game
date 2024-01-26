@@ -15,28 +15,16 @@ h1{
 .choice{
     height: 200px;
     width: 150px;
+    display: flex;
 }
 img{
     height: 150px;
     width: 120px;
     border-radius: 50%;
     object-fit: cover;
-    justify-content: center;
-    align-items: center;
 }
 
-.img1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.image{
+    justify-items: center;
 }
-.img2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.img3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
