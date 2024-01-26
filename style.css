@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    background-color: #004080;
+    height: 75px;
+    width: 100%;
+    text-align: center;
+    color: #ffff80;
+    padding-top: 23px;
+
+}
+.choice{
+    height: 200px;
+    width: 150px;
+}
+img{
+    height: 150px;
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.img1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
