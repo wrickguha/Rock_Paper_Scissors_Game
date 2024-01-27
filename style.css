@@ -1,21 +1,29 @@
 *{
     margin: 0;
     padding: 0;
+    text-align: center;
+}
+
+body{
+    background-color: aquamarine;
 }
 
 h1{
     background-color: #004080;
     height: 75px;
     width: 100%;
-    text-align: center;
     color: #ffff80;
     padding-top: 23px;
 
 }
-.choice{
+.image{
     height: 200px;
     width: 150px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
 }
 img{
     height: 150px;
@@ -24,7 +32,38 @@ img{
     object-fit: cover;
 }
 
-.image{
-    justify-items: center;
+.choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+
+.choice:hover{
+    cursor: pointer;    
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.points{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.person_score{
+    border: 1px solid black;
+    padding: 15px;
+}
+
+
+.computer_score{
+    border: 1px solid black;
+    padding: 15px;
+}
+
+#border{
+    background-color: bisque;
 }
 
