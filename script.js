@@ -7,7 +7,7 @@ choice.forEach((image) =>
 {
     image.addEventListener("click", () =>
     {
-        const user_choice=choice.getAttribute("id");
+        const user_choice=image.getAttribute("id");
         console.log("It is clicked",user_choice);
     })
 }

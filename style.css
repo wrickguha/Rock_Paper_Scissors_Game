@@ -40,7 +40,19 @@ img{
 }
 
 
-#img:hover
+#rock:hover
+{
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.2);
+}
+
+#paper:hover
+{
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.2);
+}
+
+#scissors:hover
 {
     transition: transform 0.3s ease-in-out;
     transform: scale(1.2);
