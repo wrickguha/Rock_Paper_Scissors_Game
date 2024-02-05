@@ -20,15 +20,12 @@ const draw_game = () => {
 }
 
 const show_winner = (user_score, com_score) => {
-    if (user_score>com_score) {
+    if (user_score > com_score) {
         msg_con.innerText = "You Won the Game";
-        user_score_para.innerText = user_score;
-        msg_con.style.backgroundColor = "#EAAC8B";
+
     }
-    else if(com_score>user_score) {
+    else{
         msg_con.innerText = "You lose the Game";
-        com_score_para.innerText = com_score;
-        msg_con.style.backgroundColor = "#355070";
     }
 }
 
@@ -49,38 +46,23 @@ const play_game = (user_choice) => {
 
     } else {
 
-        if ((user_choice === 'rock') && (comm_choice === 'scissors')) {
+        if ((user_choice === 'rock') && (comm_choice === 'scissors') || (user_choice === 'paper') && (comm_choice === 'rock') || (user_choice === 'scissors' && comm_choice === 'paper')) {
             user_score++;
-            console.log('You win this round');
+            console.log("you win this round");
+            user_score_para.innerText = user_score;
+            msg_con.style.backgroundColor = "#EAAC8B";
 
         }
-        else if ((user_choice === 'rock') && (comm_choice === 'paper')) {
-            com_score++;
-            console.log('You lose this round');
-        }
-        else if ((user_choice === 'paper') && (comm_choice === 'scissors')) {
-            console.log('You lose this round');
-            com_score++;
-        }
-        else if ((user_choice === 'paper') && (comm_choice === 'rock')) {
-            user_score++;
-            console.log('You win this round');
-        }
-        else if (user_choice === 'scissors' && comm_choice === 'paper') {
-            user_score++;
-            console.log("You win this round");
-        }
-        else if (user_choice === 'scissors' && comm_choice === 'rock') {
+        else if ((user_choice === 'rock') && (comm_choice === 'paper') || (user_choice === 'paper') && (comm_choice === 'scissors') || (user_choice === 'scissors' && comm_choice === 'rock')) {
             com_score++;
             console.log("You lose this round");
+            com_score_para.innerText = com_score;
+            msg_con.style.backgroundColor = "#88AB8E";
         }
-
         show_winner(user_score, com_score);
 
     }
 }
-
-
 
 const choice = document.querySelectorAll(".image");
 
