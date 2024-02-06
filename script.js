@@ -19,9 +19,9 @@ const draw_game = () => {
     msg_con.style.backgroundColor = "#E56B6F";
 }
 
-const show_winner = (user_score, com_score) => {
-    if (user_score > com_score) {
-        msg_con.innerText = "You Won the Game";
+const show_winner = (user_win) => {
+    if (user_win) {
+        msg_con.innerText = "You win the Game";
 
     }
     else{
@@ -45,13 +45,12 @@ const play_game = (user_choice) => {
         draw_game();
 
     } else {
-
-        if ((user_choice === 'rock') && (comm_choice === 'scissors') || (user_choice === 'paper') && (comm_choice === 'rock') || (user_choice === 'scissors' && comm_choice === 'paper')) {
+        let user_win=true;
+        if (user_win=((user_choice === 'rock') && (comm_choice === 'scissors') || (user_choice === 'paper') && (comm_choice === 'rock') || (user_choice === 'scissors' && comm_choice === 'paper'))) {
             user_score++;
             console.log("you win this round");
             user_score_para.innerText = user_score;
             msg_con.style.backgroundColor = "#EAAC8B";
-
         }
         else if ((user_choice === 'rock') && (comm_choice === 'paper') || (user_choice === 'paper') && (comm_choice === 'scissors') || (user_choice === 'scissors' && comm_choice === 'rock')) {
             com_score++;
@@ -59,7 +58,7 @@ const play_game = (user_choice) => {
             com_score_para.innerText = com_score;
             msg_con.style.backgroundColor = "#88AB8E";
         }
-        show_winner(user_score, com_score);
+        show_winner(user_win,user_score, com_score);
 
     }
 }
